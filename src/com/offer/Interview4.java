@@ -2,6 +2,9 @@ package com.offer;
 
 import java.util.Random;
 
+/**
+ * Page44:面试题4：二维数组的查找
+ */
 public class Interview4 {
     public static void main(String[] args) {
         Interview4 interview4 = new Interview4();
