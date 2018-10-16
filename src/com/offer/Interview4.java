@@ -10,11 +10,15 @@ public class Interview4 {
         interview4.createData(matrix, size);
         int number = interview4.getRandomOne(matrix);
         interview4.print(matrix);
-        boolean found = interview4.find(matrix, number);
-        System.out.println((found ? "该数组中包含:" : "该数组中不包含此数字:") + number);
+        System.out.println("需要查找的数字为："+number);
+        boolean found = interview4.findFromRightTop(matrix, number);
+        System.out.println("右上查找："+(found ? "该数组中包含:" : "该数组中不包含此数字:") + number);
+
+        boolean found1 = interview4.findFromLeftBottom(matrix, number);
+        System.out.println("左下查找："+(found1 ? "该数组中包含:" : "该数组中不包含此数字:") + number);
     }
 
-    public boolean find(int[][] matrix, int number) {
+    public boolean findFromRightTop(int[][] matrix, int number) {
         if (matrix == null) {
             return false;
         }
@@ -24,11 +28,34 @@ public class Interview4 {
             int col = cols - 1;
             while (row < rows && col >= 0) {
                 if (matrix[row][col] == number) {
+                    System.out.println("matrix["+row+"]["+col+"] = " +matrix[row][col]+"即为所查找的位置");
                     return true;
                 } else if (matrix[row][col] > number) {
                     --col;
                 } else {
                     ++row;
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean findFromLeftBottom(int[][] matrix,int number){
+        if (matrix == null){
+            return false;
+        }
+        int rows = matrix.length,cols = matrix[0].length;
+        if (rows >0 && cols>0){
+            int row = rows-1;
+            int col = 0;
+            while (row>=0 && col<cols){
+                if (matrix[row][col] == number){
+                    System.out.println("matrix["+row+"]["+col+"] = " +matrix[row][col]+"即为所查找的位置");
+                    return true;
+                }else if (matrix[row][col] < number){
+                    ++col;
+                }else {
+                    --row;
                 }
             }
         }
