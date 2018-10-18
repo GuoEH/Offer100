@@ -11,8 +11,8 @@ import java.util.Random;
 public class Interview6 {
     public static void main(String[] args) {
         Interview6 interview6 = new Interview6();
-        ListNode node = interview6.createData();
-        interview6.print(node);
+        ListNode node = ListNode.createData(9);
+        ListNode.print(node);
         interview6.printNodeListReverse(node);
     }
 
@@ -21,6 +21,10 @@ public class Interview6 {
      * @param linkedList 需要打印的链表
      */
     public void printNodeListReverse(ListNode linkedList) {
+        if (linkedList == null){
+            System.out.println("链表为空");
+            return;
+        }
         printNode(linkedList);
     }
 
@@ -29,29 +33,5 @@ public class Interview6 {
             printNode(next.next);
         }
         System.out.print(" <- " + next.value);
-    }
-
-    public ListNode createData() {
-        Random random = new Random(System.currentTimeMillis());
-        int max = 100;
-        int size = 10;
-        ListNode currentNode = new ListNode(random.nextInt(max));
-        ListNode node = currentNode;
-        for (int i = 0; i < size; i++) {
-            ListNode newNode = new ListNode(random.nextInt(max));
-            currentNode.next = newNode;
-            currentNode = newNode;
-        }
-        return node;
-    }
-
-    public void print(ListNode node) {
-        ListNode currentNode = node;
-        System.out.println(">>>");
-        do {
-            System.out.print(currentNode.value + " -> ");
-            currentNode = currentNode.next;
-        } while (currentNode!= null);
-        System.out.println("\n<<<");
     }
 }
