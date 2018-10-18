@@ -12,8 +12,8 @@ public class Interview7 {
         Interview7 interview7 = new Interview7();
 
         // 普通二叉树
-//        int[] pre = {1, 2, 4, 7, 3, 5, 6, 8};
-//        int[] in = {4, 7, 2, 1, 5, 3, 8, 6};
+        int[] pre = {1, 2, 4, 7, 3, 5, 6, 8};
+        int[] in = {4, 7, 2, 1, 5, 3, 8, 6};
 
         // 所有结点都没有右子结点
 //        int[] pre = {1, 2, 3, 4, 5};
@@ -29,8 +29,8 @@ public class Interview7 {
 
         // 输入的两个序列不匹配
         // TODO：修复不匹配的情况
-        int[] pre = {1, 2, 4, 5, 3, 6, 7};
-        int[] in= {4, 2, 8, 1, 6, 3, 7};
+//        int[] pre = {1, 2, 4, 5, 3, 6, 7};
+//        int[] in= {4, 2, 8, 1, 6, 3, 7};
 
         BinaryTreeNode root = interview7.construct(pre, in, pre.length);
 
