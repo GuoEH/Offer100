@@ -1,8 +1,6 @@
-package com.offer;
+package com.offer.limit10;
 
 import com.offer.datastruct.BinaryTreeNode;
-
-import java.util.Random;
 
 /**
  * Page62：面试题7：重建二叉树

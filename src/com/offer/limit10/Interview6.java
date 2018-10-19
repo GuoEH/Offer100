@@ -1,9 +1,6 @@
-package com.offer;
+package com.offer.limit10;
 
 import com.offer.datastruct.ListNode;
-
-import java.util.LinkedList;
-import java.util.Random;
 
 /**
  * Page58:面试题6：从尾到头打印链表

@@ -1,4 +1,4 @@
-package com.offer;
+package com.offer.limit10;
 
 import com.offer.datastruct.Queueable;
 
@@ -6,6 +6,8 @@ import java.util.Stack;
 
 /**
  * Page68:面试题9：用两个栈实现队列
+ *
+ * //TODO:相关题目：用两个队列实现一个栈
  */
 public class Interview9 implements Queueable<Integer> {
     public static void main(String[] args) {

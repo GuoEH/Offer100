@@ -1,4 +1,4 @@
-package com.offer;
+package com.offer.limit10;
 
 /**
  * Page51：面试题5：替换空格

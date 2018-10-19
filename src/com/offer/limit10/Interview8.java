@@ -1,4 +1,4 @@
-package com.offer;
+package com.offer.limit10;
 
 import com.offer.datastruct.BinaryTreeNode;
 
