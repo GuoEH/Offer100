@@ -14,7 +14,7 @@ public class Interview12<T> {
                 , 'e', 'f', 'g', 'h'
                 , 'i', 'j', 'k', 'l'};
         characterMatrix.setMatrix(characterArray);
-        String str = "abfgkl";
+        String str = "cfj";
         System.out.println(characterMatrix);
         boolean contains = interview12.isMatrixContainPath(characterMatrix, str);
         System.out.println(contains ? "包含" : "不包含");
