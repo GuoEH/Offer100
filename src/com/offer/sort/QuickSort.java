@@ -7,11 +7,11 @@ import java.util.Random;
 /**
  * 快速排序
  */
-public class QuickSort {
+public class QuickSort extends Sort{
     public static void main(String[] args) {
         int[] array = Arrays.createData(20, 50);
         Arrays.print(array);
-        QuickSort sort = new QuickSort();
+        Sort sort = new QuickSort();
         long startTime = System.nanoTime();
         sort.sort(array, 0, array.length - 1);
         long endTime = System.nanoTime();
@@ -19,6 +19,7 @@ public class QuickSort {
         Arrays.print(array);
     }
 
+    @Override
     public void sort(int[] array, int start, int end) {
         if (start == end) {
             return;
@@ -75,18 +76,5 @@ public class QuickSort {
         Random random = new Random(System.currentTimeMillis());
         int index = start + random.nextInt((end - start));
         return index;
-    }
-
-    /**
-     * 交换数组的两个位置
-     *
-     * @param array  数组
-     * @param index1 第一个位置
-     * @param index2 第二个位置
-     */
-    private void swap(int[] array, int index1, int index2) {
-        int tmp = array[index1];
-        array[index1] = array[index2];
-        array[index2] = tmp;
     }
 }
